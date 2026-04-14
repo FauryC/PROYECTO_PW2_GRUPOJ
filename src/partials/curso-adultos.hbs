@@ -1,1 +1,66 @@
-<!-- próximamente -->
+<section class="adultos-hero">
+    <h1>{{adultos_titulo}}</h1>
+    <p>{{adultos_descripcion}}</p>
+</section>
+
+<section class="adultos-niveles">
+    <h2>{{adultos_niveles_titulo}}</h2>
+    <div class="niveles-grid">
+        {{#each adultos_niveles}}
+        <div class="nivel-card {{#if destacado}}nivel-destacado{{/if}}">
+            {{#if destacado}}<span class="badge-destacado">{{badge}}</span>{{/if}}
+            <h3 class="nivel-nombre">{{nombre}}</h3>
+            <p class="nivel-marco">{{marco_europeo}}</p>
+            <p class="nivel-descripcion">{{descripcion}}</p>
+            <ul class="nivel-contenidos">
+                {{#each contenidos}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            <div class="nivel-datos">
+                <span>🕐 {{duracion}}</span>
+                <span>👥 {{max_alumnos}} alumnos máx.</span>
+            </div>
+            <p class="nivel-precio"><strong>{{precio}}</strong> / semestre</p>
+        </div>
+        {{/each}}
+    </div>
+</section>
+
+<section class="adultos-horarios">
+    <h2>{{adultos_horarios_titulo}}</h2>
+    <table class="tabla-horarios">
+        <thead>
+            <tr>
+                {{#each adultos_horarios_encabezados}}
+                <th>{{this}}</th>
+                {{/each}}
+            </tr>
+        </thead>
+        <tbody>
+            {{#each adultos_horarios}}
+            <tr>
+                <td>{{nivel}}</td>
+                <td>{{lunes_miercoles}}</td>
+                <td>{{martes_jueves}}</td>
+                <td>{{sabado}}</td>
+                <td>{{modalidad}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</section>
+
+<section class="adultos-inscripcion">
+    <h2>{{adultos_inscripcion_titulo}}</h2>
+    <div class="inscripcion-pasos">
+        {{#each adultos_pasos}}
+        <div class="paso">
+            <span class="paso-numero">{{numero}}</span>
+            <h3>{{titulo}}</h3>
+            <p>{{descripcion}}</p>
+        </div>
+        {{/each}}
+    </div>
+    <a href="{{adultos_btn_enlace}}" class="btn-inscribirse">{{adultos_btn_texto}}</a>
+</section>
