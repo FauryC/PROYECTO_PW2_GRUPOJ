@@ -1,1 +1,25 @@
-<!-- próximamente -->
+<section class="cursos-hero">
+    <h1 class="cursos-titulo">{{cursos_titulo}}</h1>
+    <p class="cursos-subtitulo">{{cursos_subtitulo}}</p>
+</section>
+
+<section class="cursos-categorias">
+    {{#each cursos_categorias}}
+    <article class="categoria-card">
+        <div class="categoria-header">
+            <span class="categoria-icono">{{icono}}</span>
+            <h2 class="categoria-nombre">{{nombre}}</h2>
+        </div>
+        <p class="categoria-descripcion">{{descripcion}}</p>
+        <ul class="categoria-niveles">
+            {{#each niveles}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+        <div class="categoria-footer">
+            <span class="categoria-edad">{{rango_edad}}</span>
+            <a href="{{enlace}}" class="btn-categoria">Ver cursos</a>
+        </div>
+    </article>
+    {{/each}}
+</section>

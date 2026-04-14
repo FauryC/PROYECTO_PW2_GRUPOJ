@@ -1,0 +1,191 @@
+﻿:root {
+    --rojo-af: #d11212;
+    --rojo-af-oscuro: #a60e0e;
+    --azul-af: #003366;
+    --gris-fondo: #f4f5f8;
+}
+
+main {
+    background-color: var(--gris-fondo);
+}
+
+/* ══ Hero ══════════════════════════════════════════════════════ */
+.cursos-hero {
+    padding: 80px 8% 70px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--rojo-af) 0%, var(--rojo-af-oscuro) 100%);
+    color: #ffffff;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.cursos-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 18px;
+    letter-spacing: 0.6px;
+}
+
+.cursos-subtitulo {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+/* ══ Grid de categorías ═══════════════════════════════════════ */
+.cursos-categorias {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 3% 70px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+/* ══ Tarjeta de categoría ═════════════════════════════════════ */
+.categoria-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px 22px 26px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fadeUp 0.7s ease-out;
+}
+
+.categoria-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.18);
+}
+
+.categoria-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.categoria-icono {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.categoria-nombre {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--azul-af);
+    margin: 0;
+}
+
+.categoria-descripcion {
+    font-size: 0.97rem;
+    color: #555555;
+    margin: 5px 0 6px;
+    line-height: 1.6;
+}
+
+.categoria-niveles {
+    list-style: disc;
+    padding-left: 18px;
+    margin: 4px 0 8px;
+    font-size: 0.92rem;
+    color: #555555;
+}
+
+.categoria-niveles li {
+    margin-bottom: 2px;
+}
+
+.categoria-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.categoria-edad {
+    font-size: 0.88rem;
+    color: #777777;
+    font-weight: 500;
+}
+
+.btn-categoria {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--rojo-af);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.btn-categoria:hover {
+    color: var(--rojo-af-oscuro);
+    text-decoration: underline;
+}
+
+/* ══ Animaciones ═══════════════════════════════════════════════ */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ══ Responsive ════════════════════════════════════════════════ */
+@media (max-width: 992px) {
+    .cursos-hero {
+        padding: 70px 6% 60px;
+    }
+
+    .cursos-categorias {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .cursos-titulo {
+        font-size: 2.4rem;
+    }
+
+    .cursos-categorias {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .cursos-hero {
+        padding: 60px 5% 45px;
+    }
+
+    .cursos-categorias {
+        padding: 45px 5% 55px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

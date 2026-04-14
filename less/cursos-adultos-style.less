@@ -1,0 +1,389 @@
+:root {
+    --rojo-af: #d11212;
+    --rojo-af-oscuro: #a60e0e;
+    --azul-af: #003366;
+    --gris-texto: #444444;
+    --gris-suave: #f4f5f8;
+    --blanco: #ffffff;
+
+    --sombra-suave: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --sombra-hover: 0 14px 40px rgba(0, 0, 0, 0.18);
+
+    --font-titulos: "Playfair Display", "Georgia", serif;
+    --font-texto: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+main {
+    background-color: var(--gris-suave);
+    font-family: var(--font-texto);
+}
+
+/* ══ Hero ══════════════════════════════════════════════════════ */
+.adultos-hero {
+    padding: 80px 8% 70px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--rojo-af) 0%, var(--rojo-af-oscuro) 100%);
+    color: var(--blanco);
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.adultos-hero h1 {
+    font-family: var(--font-titulos);
+    font-size: 2.8rem;
+    margin-bottom: 14px;
+    letter-spacing: 0.04em;
+}
+
+.adultos-hero p {
+    max-width: 860px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    font-family: var(--font-texto);
+}
+
+/* ══ Niveles ══════════════════════════════════════════════════ */
+.adultos-niveles {
+    padding: 60px 6% 70px;
+    text-align: center;
+    background-color: var(--blanco);
+    animation: fadeIn 0.9s ease-out;
+}
+
+.adultos-niveles > h2 {
+    font-family: var(--font-titulos);
+    font-size: 2.1rem;
+    color: var(--rojo-af);
+    margin-bottom: 30px;
+}
+
+.niveles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.nivel-card {
+    background: var(--gris-suave);
+    border-radius: 16px;
+    padding: 24px 20px;
+    box-shadow: var(--sombra-suave);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fadeUp 0.7s ease-out;
+}
+
+.nivel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover);
+}
+
+.nivel-destacado {
+    border: 2px solid var(--rojo-af);
+    background: var(--blanco);
+}
+
+.badge-destacado {
+    display: inline-block;
+    background: var(--rojo-af);
+    color: var(--blanco);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+.nivel-nombre {
+    font-family: var(--font-titulos);
+    font-size: 1.3rem;
+    color: var(--azul-af);
+    margin: 0;
+}
+
+.nivel-marco {
+    font-size: 0.85rem;
+    color: var(--rojo-af);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0;
+}
+
+.nivel-descripcion {
+    font-size: 0.96rem;
+    color: var(--gris-texto);
+    line-height: 1.6;
+    margin: 4px 0;
+}
+
+.nivel-contenidos {
+    list-style: disc;
+    padding-left: 18px;
+    font-size: 0.9rem;
+    color: var(--gris-texto);
+    margin: 4px 0;
+}
+
+.nivel-contenidos li {
+    margin-bottom: 2px;
+}
+
+.nivel-datos {
+    display: flex;
+    gap: 14px;
+    font-size: 0.88rem;
+    color: #666666;
+    margin-top: 4px;
+    flex-wrap: wrap;
+}
+
+.nivel-precio {
+    font-size: 1rem;
+    color: var(--gris-texto);
+    margin-top: auto;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+/* ══ Horarios ═════════════════════════════════════════════════ */
+.adultos-horarios {
+    padding: 60px 6% 70px;
+    background-color: var(--gris-suave);
+    animation: fadeIn 0.9s ease-out;
+}
+
+.adultos-horarios h2 {
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    color: var(--azul-af);
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.tabla-horarios {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: var(--blanco);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+    font-family: var(--font-texto);
+}
+
+.tabla-horarios thead {
+    background-color: var(--azul-af);
+    color: var(--blanco);
+}
+
+.tabla-horarios th {
+    padding: 14px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: left;
+    letter-spacing: 0.03em;
+}
+
+.tabla-horarios td {
+    padding: 12px 16px;
+    font-size: 0.94rem;
+    color: var(--gris-texto);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.tabla-horarios tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-horarios tbody tr:hover td {
+    background-color: #fef5f5;
+}
+
+/* ══ Inscripción ══════════════════════════════════════════════ */
+.adultos-inscripcion {
+    padding: 60px 6% 70px;
+    text-align: center;
+    background-color: var(--blanco);
+    animation: fadeIn 0.9s ease-out;
+}
+
+.adultos-inscripcion h2 {
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    color: var(--rojo-af);
+    margin-bottom: 30px;
+}
+
+.inscripcion-pasos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto 36px;
+}
+
+.paso {
+    flex: 1 1 220px;
+    max-width: 280px;
+    background: var(--gris-suave);
+    border-radius: 14px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fadeUp 0.7s ease-out;
+}
+
+.paso:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-hover);
+}
+
+.paso-numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--rojo-af);
+    color: var(--blanco);
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: var(--font-titulos);
+    flex-shrink: 0;
+}
+
+.paso h3 {
+    font-family: var(--font-titulos);
+    font-size: 1.1rem;
+    color: var(--azul-af);
+    margin: 0;
+}
+
+.paso p {
+    font-size: 0.94rem;
+    color: var(--gris-texto);
+    line-height: 1.6;
+    margin: 0;
+    font-family: var(--font-texto);
+}
+
+.btn-inscribirse {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: var(--rojo-af);
+    color: var(--blanco);
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    font-family: var(--font-texto);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-inscribirse:hover {
+    background-color: var(--rojo-af-oscuro);
+    transform: translateY(-2px);
+}
+
+/* ══ Animaciones ═══════════════════════════════════════════════ */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ══ Responsive ════════════════════════════════════════════════ */
+@media (max-width: 992px) {
+    .niveles-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .adultos-hero {
+        padding: 70px 6% 60px;
+    }
+
+    .adultos-hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .niveles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tabla-horarios {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .inscripcion-pasos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paso {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .adultos-hero {
+        padding: 60px 5%;
+    }
+
+    .adultos-niveles,
+    .adultos-horarios,
+    .adultos-inscripcion {
+        padding: 45px 5%;
+    }
+}

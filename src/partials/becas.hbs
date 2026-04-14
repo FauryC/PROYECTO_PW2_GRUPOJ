@@ -26,41 +26,59 @@
         {{/each}}
     </div>
 </section>
-
-<section class="adultos-horarios">
-    <h2>{{adultos_horarios_titulo}}</h2>
-    <table class="tabla-horarios">
-        <thead>
-            <tr>
-                {{#each adultos_horarios_encabezados}}
-                <th>{{this}}</th>
-                {{/each}}
-            </tr>
-        </thead>
-        <tbody>
-            {{#each adultos_horarios}}
-            <tr>
-                <td>{{nivel}}</td>
-                <td>{{lunes_miercoles}}</td>
-                <td>{{martes_jueves}}</td>
-                <td>{{sabado}}</td>
-                <td>{{modalidad}}</td>
-            </tr>
-            {{/each}}
-        </tbody>
-    </table>
+<section class="becas-hero">
+    <h1>{{becas_titulo}}</h1>
+    <p>{{becas_descripcion}}</p>
 </section>
 
-<section class="adultos-inscripcion">
-    <h2>{{adultos_inscripcion_titulo}}</h2>
-    <div class="inscripcion-pasos">
-        {{#each adultos_pasos}}
-        <div class="paso">
-            <span class="paso-numero">{{numero}}</span>
-            <h3>{{titulo}}</h3>
-            <p>{{descripcion}}</p>
-        </div>
+<section class="becas-lista">
+    <h2>{{becas_lista_titulo}}</h2>
+    <div class="becas-grid">
+        {{#each becas}}
+        <article class="beca-card {{#if destacada}}beca-destacada{{/if}}">
+            {{#if destacada}}<span class="beca-badge">{{badge}}</span>{{/if}}
+            <h3 class="beca-nombre">{{nombre}}</h3>
+            <p class="beca-organismo">🏛 {{organismo}}</p>
+            <p class="beca-descripcion">{{descripcion}}</p>
+            <div class="beca-detalles">
+                <div class="beca-detalle">
+                    <span class="detalle-icono">💰</span>
+                    <span>{{monto}}</span>
+                </div>
+                <div class="beca-detalle">
+                    <span class="detalle-icono">📅</span>
+                    <span>Cierre: {{fecha_cierre}}</span>
+                </div>
+                <div class="beca-detalle">
+                    <span class="detalle-icono">🎯</span>
+                    <span>{{dirigida_a}}</span>
+                </div>
+            </div>
+            <ul class="beca-requisitos-lista">
+                {{#each requisitos}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            <a href="{{enlace}}" class="btn-beca">Más información</a>
+        </article>
         {{/each}}
     </div>
-    <a href="{{adultos_btn_enlace}}" class="btn-inscribirse">{{adultos_btn_texto}}</a>
+</section>
+
+<section class="becas-proceso">
+    <h2>{{becas_proceso_titulo}}</h2>
+    <ol class="proceso-pasos">
+        {{#each becas_proceso_pasos}}
+        <li class="proceso-paso">
+            <strong>{{titulo}}</strong>
+            <p>{{descripcion}}</p>
+        </li>
+        {{/each}}
+    </ol>
+</section>
+
+<section class="becas-contacto">
+    <h2>{{becas_contacto_titulo}}</h2>
+    <p>{{becas_contacto_texto}}</p>
+    <a href="mailto:{{becas_contacto_email}}" class="btn-contacto-becas">{{becas_contacto_btn}}</a>
 </section>

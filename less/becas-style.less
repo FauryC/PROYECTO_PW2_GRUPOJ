@@ -1,0 +1,489 @@
+﻿:root {
+    --rojo-af: #d11212;
+    --rojo-af-oscuro: #a10e0e;
+    --azul-af: #003366;
+    --gris-texto: #444444;
+    --gris-suave: #f4f5f8;
+    --blanco: #ffffff;
+
+    --sombra-suave: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --sombra-hover: 0 14px 40px rgba(0, 0, 0, 0.18);
+
+    --font-titulos: "Playfair Display", "Georgia", serif;
+    --font-texto: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ══ Sección adultos (incluida en becas.hbs) ══════════════════ */
+.adultos-hero {
+    padding: 80px 8% 70px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--rojo-af) 0%, var(--rojo-af-oscuro) 100%);
+    color: var(--blanco);
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.adultos-hero h1 {
+    font-family: var(--font-titulos);
+    font-size: 2.8rem;
+    margin-bottom: 14px;
+    letter-spacing: 0.04em;
+}
+
+.adultos-hero p {
+    max-width: 860px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    font-family: var(--font-texto);
+}
+
+.adultos-niveles {
+    padding: 60px 6% 70px;
+    text-align: center;
+    background-color: var(--gris-suave);
+    animation: fadeIn 0.9s ease-out;
+}
+
+.adultos-niveles h2 {
+    font-family: var(--font-titulos);
+    font-size: 2.1rem;
+    color: var(--rojo-af);
+    margin-bottom: 30px;
+}
+
+.niveles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.nivel-card {
+    background: var(--blanco);
+    border-radius: 16px;
+    padding: 24px 20px;
+    box-shadow: var(--sombra-suave);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fadeUp 0.7s ease-out;
+}
+
+.nivel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover);
+}
+
+.nivel-destacado {
+    border: 2px solid var(--rojo-af);
+}
+
+.badge-destacado {
+    display: inline-block;
+    background: var(--rojo-af);
+    color: var(--blanco);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+.nivel-nombre {
+    font-family: var(--font-titulos);
+    font-size: 1.3rem;
+    color: var(--azul-af);
+    margin: 0;
+}
+
+.nivel-marco {
+    font-size: 0.85rem;
+    color: var(--rojo-af);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0;
+}
+
+.nivel-descripcion {
+    font-size: 0.96rem;
+    color: var(--gris-texto);
+    line-height: 1.6;
+    margin: 4px 0;
+}
+
+.nivel-contenidos {
+    list-style: disc;
+    padding-left: 18px;
+    font-size: 0.9rem;
+    color: var(--gris-texto);
+    margin: 4px 0;
+}
+
+.nivel-contenidos li {
+    margin-bottom: 2px;
+}
+
+.nivel-datos {
+    display: flex;
+    gap: 14px;
+    font-size: 0.88rem;
+    color: #666666;
+    margin-top: 4px;
+    flex-wrap: wrap;
+}
+
+.nivel-precio {
+    font-size: 1rem;
+    color: var(--gris-texto);
+    margin-top: auto;
+    padding-top: 8px;
+}
+
+/* ══ Becas Hero ═══════════════════════════════════════════════ */
+.becas-hero {
+    padding: 90px 24px;
+    text-align: center;
+    color: var(--blanco);
+    background: radial-gradient(circle at top left, #ff4a4a, var(--rojo-af-oscuro));
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.becas-hero h1 {
+    font-family: var(--font-titulos);
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+}
+
+.becas-hero p {
+    max-width: 820px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    opacity: 0.92;
+    font-family: var(--font-texto);
+}
+
+/* ══ Lista de becas ═══════════════════════════════════════════ */
+.becas-lista {
+    padding: 60px 6% 70px;
+    text-align: center;
+    background-color: var(--gris-suave);
+    animation: fadeIn 0.9s ease-out;
+}
+
+.becas-lista h2 {
+    font-family: var(--font-titulos);
+    font-size: 2.1rem;
+    color: var(--rojo-af);
+    margin-bottom: 30px;
+}
+
+.becas-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ══ Beca card ════════════════════════════════════════════════ */
+.beca-card {
+    width: 300px;
+    background: var(--blanco);
+    border-radius: 18px;
+    box-shadow: var(--sombra-suave);
+    overflow: hidden;
+    text-align: left;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+    animation: fadeUp 0.7s ease-out;
+}
+
+.beca-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-hover);
+    background-color: #fff9f9;
+}
+
+.beca-destacada {
+    border: 2px solid var(--rojo-af);
+}
+
+.beca-badge {
+    display: inline-block;
+    background: var(--rojo-af);
+    color: var(--blanco);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.beca-nombre {
+    font-family: var(--font-titulos);
+    font-size: 1.3rem;
+    color: var(--rojo-af);
+    margin: 0;
+}
+
+.beca-organismo {
+    font-size: 0.9rem;
+    color: var(--azul-af);
+    font-weight: 600;
+    margin: 0;
+    font-family: var(--font-texto);
+}
+
+.beca-descripcion {
+    font-size: 0.96rem;
+    color: var(--gris-texto);
+    line-height: 1.6;
+    margin: 0;
+    font-family: var(--font-texto);
+}
+
+.beca-detalles {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 4px 0;
+}
+
+.beca-detalle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--gris-texto);
+    font-family: var(--font-texto);
+}
+
+.detalle-icono {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.beca-requisitos-lista {
+    list-style: disc;
+    padding-left: 18px;
+    font-size: 0.9rem;
+    color: var(--gris-texto);
+    margin: 4px 0;
+}
+
+.beca-requisitos-lista li {
+    margin-bottom: 2px;
+}
+
+.btn-beca {
+    margin-top: auto;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--rojo-af);
+    color: var(--blanco);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    font-family: var(--font-texto);
+}
+
+.btn-beca:hover {
+    background-color: var(--rojo-af-oscuro);
+}
+
+/* ══ Proceso ══════════════════════════════════════════════════ */
+.becas-proceso {
+    padding: 60px 6%;
+    text-align: center;
+    background-color: var(--blanco);
+    animation: fadeIn 0.9s ease-out;
+}
+
+.becas-proceso h2 {
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    color: var(--azul-af);
+    margin-bottom: 30px;
+}
+
+.proceso-pasos {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+
+.proceso-paso {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 18px 22px;
+    background: var(--gris-suave);
+    border-radius: 12px;
+    border-left: 4px solid var(--rojo-af);
+}
+
+.proceso-paso strong {
+    font-family: var(--font-titulos);
+    font-size: 1.1rem;
+    color: var(--azul-af);
+}
+
+.proceso-paso p {
+    font-size: 0.96rem;
+    color: var(--gris-texto);
+    margin: 0;
+    line-height: 1.6;
+    font-family: var(--font-texto);
+}
+
+/* ══ Contacto ═════════════════════════════════════════════════ */
+.becas-contacto {
+    padding: 60px 6% 70px;
+    text-align: center;
+    background-color: var(--gris-suave);
+    font-family: var(--font-texto);
+    animation: fadeIn 0.9s ease-out;
+}
+
+.becas-contacto h2 {
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    color: var(--rojo-af);
+    margin-bottom: 10px;
+}
+
+.becas-contacto p {
+    max-width: 640px;
+    margin: 0 auto 24px;
+    color: var(--gris-texto);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.btn-contacto-becas {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--rojo-af);
+    color: var(--blanco);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: var(--font-texto);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-contacto-becas:hover {
+    background-color: var(--rojo-af-oscuro);
+    transform: translateY(-2px);
+}
+
+/* ══ Animaciones ═══════════════════════════════════════════════ */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ══ Responsive ════════════════════════════════════════════════ */
+@media (max-width: 992px) {
+    .niveles-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .adultos-hero,
+    .becas-hero {
+        padding: 70px 18px;
+    }
+
+    .adultos-hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .becas-hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .beca-card {
+        width: 94%;
+    }
+
+    .niveles-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .adultos-hero,
+    .becas-hero {
+        padding: 60px 5%;
+    }
+
+    .adultos-niveles,
+    .becas-lista,
+    .becas-proceso,
+    .becas-contacto {
+        padding: 45px 5%;
+    }
+}
