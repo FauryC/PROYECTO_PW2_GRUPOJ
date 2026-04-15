@@ -22,6 +22,131 @@ function getAllPageContext() {
 // ─── Datos específicos por página ─────────────────────────────────────────────
 const pageData = {
 
+    // ── /index.html ───────────────────────────────────────────────────────────
+    "/index.html": {
+        // Bienvenida
+        index_bienvenida_titulo: "Bienvenido a la Alianza Francesa de Honduras",
+
+        // Carrusel
+        index_carrusel_items: [
+            {
+                imagen: "/IMAGENES/RECUROSC/CarruselParis1.jpg",
+                alt: "Torre Eiffel",
+                caption: "Explora la magia de la Torre Eiffel"
+            },
+            {
+                imagen: "/IMAGENES/RECUROSC/cafeParis2.jpg",
+                alt: "Café en París",
+                caption: "Los cafés parisinos más emblemáticos"
+            },
+            {
+                imagen: "/IMAGENES/RECUROSC/CarruselParis3.jpg",
+                alt: "Calles de París",
+                caption: "Recorre las calles históricas de París"
+            }
+        ],
+
+        // Contadores
+        index_contadores: [
+            {
+                icono: "https://aftegucigalpa.hn/wp-content/uploads/2025/06/AF-icon.png",
+                numero: "+1080",
+                descripcion: "Alianzas Francesas en los 5 Continentes"
+            },
+            {
+                icono: "https://aftegucigalpa.hn/wp-content/uploads/2025/06/Eventos.png",
+                numero: "+70",
+                descripcion: "Eventos Culturales al año"
+            },
+            {
+                icono: "https://aftegucigalpa.hn/wp-content/uploads/2025/06/Estudiantes.png",
+                numero: "+1,604",
+                descripcion: "Estudiantes al año"
+            }
+        ],
+
+        // Misión
+        index_mision_logo: "https://aftegucigalpa.hn/wp-content/uploads/2025/06/AF-Logo-02.png",
+        index_mision_titulo: "Misión",
+        index_mision_texto: "Promover la lengua y cultura francesas...",
+
+        // Noticias
+        index_noticias_titulo: "Noticias",
+        index_noticias: [
+            {
+                imagen: "/IMAGENES/RECUROSC/GRILLA1.jpg",
+                titulo: "Nuevo curso intensivo de francés",
+                texto: "Iniciamos inscripciones...",
+                enlace: "https://aftegucigalpa.hn/",
+                enlace_texto: "Leer más"
+            },
+            {
+                imagen: "/IMAGENES/RECUROSC/GRILLA2.jpg",
+                titulo: "Examen DELF-DALF exitoso",
+                texto: "Más de 80 estudiantes...",
+                enlace: "https://aftegucigalpa.hn/",
+                enlace_texto: "Leer más"
+            },
+            {
+                imagen: "/IMAGENES/RECUROSC/GRILLA3.jpg",
+                titulo: "Nueva exposición cultural",
+                texto: "Visita la galería...",
+                enlace: "https://aftegucigalpa.hn/",
+                enlace_texto: "Leer más"
+            }
+        ]
+    },
+
+    // ── /nosotros.html ────────────────────────────────────────────────────────
+    "/nosotros.html": {
+        // Sección principal
+        nosotros_titulo: "Sobre la Alianza Francesa de Tegucigalpa",
+        nosotros_intro: "Institución cultural y educativa dedicada a la enseñanza del idioma francés desde hace más de 65 años.",
+        nosotros_historia_titulo: "Nuestra Historia",
+        nosotros_historia_texto: "Formamos parte de una red mundial de más de 800 sedes que promueven la lengua francesa.",
+
+        // Misión y valores
+        nosotros_mision_valores_titulo: "Nuestra Misión y Valores",
+        nosotros_mision_titulo: "Misión",
+        nosotros_mision_texto: "Enseñar el idioma francés de manera innovadora.",
+        nosotros_valores_titulo: "Valores",
+        nosotros_valores: [
+            "Excelencia académica",
+            "Interculturalidad",
+            "Accesibilidad",
+            "Creatividad"
+        ],
+
+        // CTA inscripción
+        nosotros_cta_titulo: "Inicia tu recorrido en el aprendizaje del francés",
+        nosotros_cta_texto: "Inscríbete hoy y forma parte de nuestra comunidad.",
+        nosotros_cta_btn_texto: "Inscríbete ahora",
+        nosotros_cta_btn_enlace: "./formulario",
+
+        // Comité directivo
+        nosotros_comite_titulo: "Comité Directivo",
+        nosotros_comite: [
+            { nombre: "ISABELLE DIRIS",  cargo: "Directora" },
+            { nombre: "Nidia Rodríguez", cargo: "Administradora" },
+            { nombre: "PAOLA TÁBORA",    cargo: "Coordinadora" }
+        ],
+
+        // Personal docente
+        nosotros_docentes_titulo: "Personal Docente",
+        nosotros_docentes: [
+            { nombre: "Oscar Hernández" },
+            { nombre: "Kenya Amador" },
+            { nombre: "Carolina Ávila" }
+        ],
+
+        // Instituciones asociadas
+        nosotros_instituciones_titulo: "Instituciones asociadas",
+        nosotros_instituciones: [
+            { nombre: "Embajada de Francia",      url: "https://hn.ambafrance.org/-Espanol-" },
+            { nombre: "Liceo franco-hondureño",   url: "https://www.liceofranco.com/" }
+        ]
+    },
+
     // ── /cursos.html ──────────────────────────────────────────────────────────
     "/cursos.html": {
         cursos_titulo: "Nuestros Cursos de Francés",
@@ -184,4 +309,3 @@ export const getData = (page) => {
     const specific = pageData[page] ?? {};
     return { ...getAllPageContext(), ...specific };
 };
-

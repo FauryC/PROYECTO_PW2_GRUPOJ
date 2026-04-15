@@ -5,33 +5,28 @@
 
     <div class="sobre-af-content">
 
-        <h2 class="titulo-elegante">Sobre la Alianza Francesa de Tegucigalpa</h2>
+        <h2 class="titulo-elegante">{{nosotros_titulo}}</h2>
 
-        <p class="intro">
-            Institución cultural y educativa dedicada a la enseñanza del idioma francés desde hace más de 65 años.
-        </p>
+        <p class="intro">{{nosotros_intro}}</p>
 
-        <h3>Nuestra Historia</h3>
-        <p>
-            Formamos parte de una red mundial de más de 800 sedes que promueven la lengua francesa.
-        </p>
+        <h3>{{nosotros_historia_titulo}}</h3>
+        <p>{{nosotros_historia_texto}}</p>
 
-        <h2 class="titulo-elegante">Nuestra Misión y Valores</h2>
+        <h2 class="titulo-elegante">{{nosotros_mision_valores_titulo}}</h2>
 
         <div class="nosotros-grid">
 
             <div class="nosotros-card">
-                <h3>Misión</h3>
-                <p>Enseñar el idioma francés de manera innovadora.</p>
+                <h3>{{nosotros_mision_titulo}}</h3>
+                <p>{{nosotros_mision_texto}}</p>
             </div>
 
             <div class="nosotros-card">
-                <h3>Valores</h3>
+                <h3>{{nosotros_valores_titulo}}</h3>
                 <ul>
-                    <li>Excelencia académica</li>
-                    <li>Interculturalidad</li>
-                    <li>Accesibilidad</li>
-                    <li>Creatividad</li>
+                    {{#each nosotros_valores}}
+                    <li>{{this}}</li>
+                    {{/each}}
                 </ul>
             </div>
 
@@ -41,64 +36,46 @@
 </section>
 
 <section class="cta-inscripcion">
-    <h3>Inicia tu recorrido en el aprendizaje del francés</h3>
-    <p>Inscríbete hoy y forma parte de nuestra comunidad.</p>
-    <a href="./formulario" class="btn-primary">Inscríbete ahora</a>
+    <h3>{{nosotros_cta_titulo}}</h3>
+    <p>{{nosotros_cta_texto}}</p>
+    <a href="{{nosotros_cta_btn_enlace}}" class="btn-primary">{{nosotros_cta_btn_texto}}</a>
 </section>
 
 <section class="nosotros-bloque">
-    <h2 class="titulo-elegante">Comité Directivo</h2>
+    <h2 class="titulo-elegante">{{nosotros_comite_titulo}}</h2>
 
     <div class="team-grid">
-
+        {{#each nosotros_comite}}
         <div class="team-card">
-            <h3>ISABELLE DIRIS</h3>
-            <p>Directora</p>
+            <h3>{{nombre}}</h3>
+            <p>{{cargo}}</p>
         </div>
-
-        <div class="team-card">
-            <h3>Nidia Rodríguez</h3>
-            <p>Administradora</p>
-        </div>
-
-        <div class="team-card">
-            <h3>PAOLA TÁBORA</h3>
-            <p>Coordinadora</p>
-        </div>
-
+        {{/each}}
     </div>
 </section>
 
 <section class="nosotros-bloque">
-    <h2 class="titulo-elegante">Personal Docente</h2>
+    <h2 class="titulo-elegante">{{nosotros_docentes_titulo}}</h2>
 
     <div class="team-grid">
-        <div class="team-card"><h3>Oscar Hernández</h3></div>
-        <div class="team-card"><h3>Kenya Amador</h3></div>
-        <div class="team-card"><h3>Carolina Ávila</h3></div>
+        {{#each nosotros_docentes}}
+        <div class="team-card"><h3>{{nombre}}</h3></div>
+        {{/each}}
     </div>
 </section>
 
 <section class="nosotros-bloque">
-    <h2 class="titulo-elegante">Instituciones asociadas</h2>
+    <h2 class="titulo-elegante">{{nosotros_instituciones_titulo}}</h2>
 
     <div class="team-grid">
-
+        {{#each nosotros_instituciones}}
         <div class="team-card">
-            <a href="https://hn.ambafrance.org/-Espanol-" target="_blank">
-                <h3>Embajada de Francia</h3>
+            <a href="{{url}}" target="_blank">
+                <h3>{{nombre}}</h3>
             </a>
         </div>
-
-        <div class="team-card">
-            <a href="https://www.liceofranco.com/" target="_blank">
-                <h3>Liceo franco-hondureño</h3>
-            </a>
-        </div>
-
+        {{/each}}
     </div>
 </section>
-
-
 
 <script type="module" src="/src/main.js"></script>
